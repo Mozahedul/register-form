@@ -1,0 +1,306 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-container {
+    width: 90%;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(255, 255, 255);
+    margin: 30px auto;
+    padding: 15px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=10, Direction=0, Color=#CCCCCC)";
+    /*IE 8*/
+    -moz-box-shadow: 0 0 10px 5px #CCCCCC;
+    /*FF 3.5+*/
+    -webkit-box-shadow: 0 0 10px 5px #CCCCCC;
+    /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+    box-shadow: 0 0 10px 5px #CCCCCC;
+    /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=10, Direction=135, Color=#CCCCCC);
+    /*IE 5.5-7*/
+}
+
+.form-heading {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(77, 77, 77)
+}
+
+.form-hd-span {
+    color: rgb(26, 115, 232);
+}
+
+.subtitle, .already-txt {
+    font-size: 13px;
+    text-align: center;
+    color: rgb(125, 125, 125);
+}
+
+.form-style {
+    background-color: transparent;
+    margin-top: 30px;
+}
+
+.form-control {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-style .form-control input {
+    width: 100%;
+    outline: none;
+    border: 2px solid rgb(166, 166, 166);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 12px;
+    font-size: 14px;
+    color: rgb(110, 110, 110);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.form-style .form-control input:focus,
+.form-style .form-control input:valid {
+    border: 2px solid rgb(26, 115, 232);
+}
+
+.form-style .form-control input~.span-style {
+    position: absolute;
+    top: 11px;
+    left: 10px;
+    font-size: 13px;
+    pointer-events: none;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    color: rgb(150, 150, 150)
+}
+
+.form-style .form-control input:focus~.span-style,
+.form-style .form-control input:valid~.span-style,
+.form-style .form-control input:checked~.span-style {
+    top: -10px;
+    left: 10px;
+    padding: 0 5px;
+    color: rgb(26, 115, 232);
+    background-color: rgb(255, 255, 255);
+}
+
+/* =============== checkbox style starts ============= */
+.label-container {
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    display: block;
+    padding-left: 35px;
+    padding-top: 2px;
+    cursor: pointer;
+    font-size: 14px;
+    color: rgb(51, 51, 51)
+}
+
+/* hide the default checkbox */
+.label-container .input-field {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* create a new or custom checkbox */
+.label-container input~.checkmark {
+    position: absolute;
+    width: 25px;
+    height: 23px;
+    left: 0;
+    top: 0;
+    background-color: rgb(166, 166, 166);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+}
+
+.label-container input:hover~.checkmark,
+.label-container input:focus~.checkmark,
+.label-container input:checked~.checkmark {
+    border: 1px solid rgb(14, 68, 139);
+    background-color: rgb(26, 115, 232);
+}
+
+/* create an indicator or checkmark */
+.label-container input~.checkmark:after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 12px;
+    left: 8px;
+    top: 2px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    display: none;
+}
+
+.label-container input:checked~.checkmark:after {
+    display: block;
+}
+
+.form-style .form-submit {
+    margin-top: 20px;
+}
+
+.form-style .form-submit input {
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    outline: none;
+    color: rgb(125, 125, 125);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 10px;
+    cursor: pointer;
+    border: 2px solid rgb(204, 204, 204);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-transition: 0.7s;
+    -o-transition: 0.7s;
+    transition: 0.7s;
+    letter-spacing: 0.4px;
+}
+
+.form-style .form-submit input:hover {
+    background-color: rgb(26, 115, 232);
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(69, 142, 237);
+}
+
+/* ================= form bottom style =============== */
+.form-style .form-btm-style {
+    margin-top: 20px;
+}
+
+.form-style .form-btm-style p {
+    font-size: 13px;
+}
+
+.form-style .form-btm-style .form-btm-btn {
+    width: 100%;
+    padding: 10px;
+    display: block;
+    background-color: red;
+    text-align: center;
+    margin: 0 auto;
+    background-color: rgba(26, 115, 232, 0.8);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    letter-spacing: 1px;
+    -webkit-transition: 0.7s;
+    -o-transition: 0.7s;
+    transition: 0.7s;
+}
+
+.form-style .form-btm-style .form-btm-btn:hover {
+    background-color: rgba(26, 115, 232, 1);
+}
+
+/* ==== remove cross of input field in IE ===== */
+::-ms-clear,
+::-ms-reveal {
+	display: none;
+}
+
+/* ======= Small devices and most phones ====== */
+@media (min-width: 480px) {
+    .form-container {
+        width: 75%;
+        padding: 20px;
+    }
+
+    .form-style {
+        width: 85%;
+        padding: 30px;
+        margin: 30px auto 10px;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=12, Direction=0, Color=#CCCCCC)";
+        /*IE 8*/
+        -moz-box-shadow: 0 0 12px 2px #CCCCCC;
+        /*FF 3.5+*/
+        -webkit-box-shadow: 0 0 12px 2px #CCCCCC;
+        /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+        box-shadow: 0 0 12px 2px #CCCCCC;
+        /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+        filter: progid:DXImageTransform.Microsoft.Shadow(Strength=12, Direction=135, Color=#CCCCCC);
+        /*IE 5.5-7*/
+    }
+
+    .form-heading {
+    	font-size: 24px;
+    }
+}
+
+/* ======= Most tablets ======= */
+@media (min-width: 768px) {
+    .form-container {
+        width: 60%;
+        padding: 30px;
+    }
+}
+
+/* ====== Small desktop viewpoints ======= */
+@media (min-width: 992px) {
+    .form-container {
+        width: 50%;
+    }
+}
+
+/* ======= Large desktop and wide screen */
+@media (min-width: 1200px) {
+    .form-container {
+        width: 40%;
+    }
+}
+
+/* ====== HD or retina display ====== */
+@media (min-width: 1920px) {
+    .form-container {
+        width: 30%;
+    }
+}
+
+/* ===== 4K or ultra HD display ====== */
+@media (min-width: 2560px) {
+    .form-container {
+        width: 25%;
+    }
+}
