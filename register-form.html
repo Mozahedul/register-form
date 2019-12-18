@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Registration form</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Demo project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <div class="form-heading">Registration <span class="form-hd-span">Form</span></div>
+        <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, consequatur.</p>
+        <form class="form-style">
+            <div class="form-control">
+                <input type="text" required>
+                <span class="span-style">First Name</span>
+            </div>
+            <div class="form-control">
+                <input type="text" required>
+                <span class="span-style">Last Name</span>
+            </div>
+            <div class="form-control">
+                <input type="email" onkeyup="this.value=this.value.toLowerCase();" required>
+                <span class="span-style">Email</span>
+            </div>
+            <div class="form-control">
+                <input type="password" required>
+                <span class="span-style">Password</span>
+            </div>
+            <div class="form-control">
+                <input type="password" required>
+                <span class="span-style">Confirm Password</span>
+            </div>
+            <label class="label-container">I agree to the Terms & Conditions.
+                <input type="checkbox" class="input-field">
+                <span class="checkmark"></span>
+            </label>
+            <div class="form-submit">
+                <input type="submit" value="Create Account">
+            </div>
+            <div class="form-btm-style">
+                <p class="already-txt">Already have an account?</p>
+                <a href="#" class="form-btm-btn">Login</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
